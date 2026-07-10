@@ -415,7 +415,7 @@ largeblob_array_check(const fido_blob_t *array)
 	u_char expected_hash[LARGEBLOB_DIGEST_LENGTH];
 	size_t body_len;
 
-	fido_log_xxd(array->ptr, array->len, __func__);
+	fido_log_xxd(array->ptr, array->len, "%s", __func__);
 	if (array->len < sizeof(expected_hash)) {
 		fido_log_debug("%s: len %zu", __func__, array->len);
 		return -1;
